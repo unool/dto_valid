@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+
+	<script th:src="@{/webjars/jquery/3.1.1-1/jquery.min.js}"></script>
+	<title>index</title>
+</head>
+<body>
+<h2>웰컴 페이지</h2>
+
+<a th:href="@{/member/register}">
+	<h1>가입하기</h1>
+</a>
+
+<script th:inline="javascript">
+
+    $(document).ready(function () {
+	    const result = [[${result}]];
+	    if(result != "")
+	    {
+	        alert(result);
+	    }
+	})
+</script>
+</body>
+</html>
